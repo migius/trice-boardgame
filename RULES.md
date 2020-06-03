@@ -43,6 +43,6 @@ _ordered value tris_
 _NOT a valid tris (same color **AND** ordered value)_
 
 ## Credits
-Author: Michele Bruni
-Playtester: _your name can be here!_
+Author: Michele Bruni  
+Playtester: _your name can be here!_  
 Created for: _2020 - 1 Card Print and Play Design Contest_
