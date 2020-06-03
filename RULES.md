@@ -15,13 +15,14 @@ Make a _tris_ with dice in a **trice**
 ![Components](https://raw.githubusercontent.com/migius/trice-boardgame/master/Art/components.png)
 
 ## Setup
-1. Place the card betwenn the teo players
+1. Place the card between the two players
 1. Every player roll 6 dice, the player with most 6s is the first player, in case of tie, with most 5s, 4s...
 1. The second player choose a dice for the first player, __don't change the dice value__
+1. The first player became the Active Player
 
 ## Game Flow
-The turn is played in two parts. In the first part the active player place the dice chose by the opponent in a free square in the card, there aren't placement restrictions. After placement if a _tris_ is created the player who place the dice win immediatly the game.  
-In the second part the active player choose a dice for the opponent and a new turn begin.
+The first player place the dice chose by the opponent in a free square in the card, there aren't placement restrictions. After placement if a _tris_ is created the player who place the dice win immediatly the game.  
+If the game is not ended the player that has placed the dice choose another dice for the opponent and a new turn begin.
 
 ## End of the game
 When a player make a _tris_ on the board the game end immediatly and the player who place the dice win.
@@ -30,7 +31,7 @@ When a player make a _tris_ on the board the game end immediatly and the player 
 A _tris_ is composed by three dice horizontally, vertically or diagonally aligned with __only__ one of these conditions:
 * same color
 * same value
-* ordered value (e.g. 2,3,4)
+* ordered value (e.g. 2, 3, 4)
 
 ![Example 1](https://raw.githubusercontent.com/migius/trice-boardgame/master/Art/example1.png)
 _same color tris_
