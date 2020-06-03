@@ -5,9 +5,9 @@ Make a _tris_ with dice in a **trice**
 ## Components
 1. One card
 1. 12 dice in 3 colors
-  1. 4 white dice
-  1. 4 purple dice
-  1. 4 orange dice
+   1. 4 white dice
+   1. 4 purple dice
+   1. 4 orange dice
 1. This rulebook
 
 ## Setup
