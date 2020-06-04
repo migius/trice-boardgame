@@ -16,16 +16,15 @@ Make a _tris_ with dice in a **trice**
 
 ## Setup
 1. Place the card between the two players
-1. Every player roll 6 dice, the player with most 6s is the first player, in case of tie, with most 5s, 4s...
-1. The second player choose a dice for the first player, __don't change the dice value__
-1. The first player became the Active Player
+1. Every player rolls 6 dice, the player with most 6s is the first player, in case of tie, with most 5s, 4s...
+1. The second player choose a die for the first player, __don't change the die value__
 
 ## Game Flow
-The first player place the dice chose by the opponent in a free square in the card, there aren't placement restrictions. After placement if a _tris_ is created the player who place the dice win immediatly the game.  
-If the game is not ended the player that has placed the dice choose another dice for the opponent and a new turn begin.
+The first player places the die chosen by the opponent in a free square on the card, there are no placement restrictions. After placement: if a _tris_ is created the player who placed the die wins the game immediately.
+If no _tris_ is created the player who placed the die chooses another die for the opponent and a new turn begins.
 
 ## End of the game
-When a player make a _tris_ on the board the game end immediatly and the player who place the dice win.
+When a player makes a _tris_ on the board the game ends immediately and the player who placed the die wins.
 
 ## _Tris_
 A _tris_ is composed by three dice horizontally, vertically or diagonally aligned with __only__ one of these conditions:
@@ -43,6 +42,8 @@ _ordered value tris_
 _NOT a valid tris (same color **AND** ordered value)_
 
 ## Credits
+Version: 0.1.1
 Author: Michele Bruni  
 Playtester: _your name can be here!_  
+Thanks to: @Seraphine82, @XendoBreckett
 Created for: _2020 - 1 Card Print and Play Design Contest_
