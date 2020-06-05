@@ -1,7 +1,7 @@
-![Logo](https://raw.githubusercontent.com/migius/trice-boardgame/master/Art/logo.png)
+![Logo](https://raw.githubusercontent.com/migius/trice-boardgame/master/Art/logo.svg)
 
 # TRICE
-Make a _tris_ with dice in a **trice**
+Connect 3 with dice in a **trice**
 > age 8+ | 2 players | 5 minutes
 
 ## Components
@@ -12,7 +12,7 @@ Make a _tris_ with dice in a **trice**
    1. 4 orange dice
 1. This rulebook
 
-![Components](https://raw.githubusercontent.com/migius/trice-boardgame/master/Art/components.png)
+![Components](https://raw.githubusercontent.com/migius/trice-boardgame/master/Art/components.svg)
 
 ## Setup
 1. Place the card between the two players
@@ -20,29 +20,30 @@ Make a _tris_ with dice in a **trice**
 1. The second player choose a die for the first player, __don't change the die value__
 
 ## Game Flow
-The first player places the die chosen by the opponent in a free square on the card, there are no placement restrictions. After placement: if a _tris_ is created the player who placed the die wins the game immediately.
-If no _tris_ is created the player who placed the die chooses another die for the opponent and a new turn begins.
+The first player places the die chosen by the opponent in a free square on the card, there are no placement restrictions. After placement: if a _Trice_ is created the player who placed the die wins the game immediately.
+If no _Trice_ is created the player who placed the die chooses another die for the opponent and a new turn begins.
 
 ## End of the game
-When a player makes a _tris_ on the board the game ends immediately and the player who placed the die wins.
+When a player makes a _Trice_ on the board the game ends immediately and the player who placed the die wins.  
+If a player places the last die without making a _Trice_ the game ends with a tie.
 
-## _Tris_
-A _tris_ is composed by three dice horizontally, vertically or diagonally aligned with __only__ one of these conditions:
+## _Trice_
+A _Trice_ is composed by three dice horizontally, vertically or diagonally aligned with __only__ one of these conditions:
 * same color
 * same value
 * ordered value (e.g. 2, 3, 4)
 
-![Example 1](https://raw.githubusercontent.com/migius/trice-boardgame/master/Art/example1.png)
-_same color tris_
-![Example 2](https://raw.githubusercontent.com/migius/trice-boardgame/master/Art/example2.png)
-_same value tris_
-![Example 3](https://raw.githubusercontent.com/migius/trice-boardgame/master/Art/example3.png)
-_ordered value tris_
-![Example 4](https://raw.githubusercontent.com/migius/trice-boardgame/master/Art/example4.png)
-_NOT a valid tris (same color **AND** ordered value)_
+![Example 1](https://raw.githubusercontent.com/migius/trice-boardgame/master/Art/example1.svg)
+_same color Trice_
+![Example 2](https://raw.githubusercontent.com/migius/trice-boardgame/master/Art/example2.svg)
+_same value Trice_
+![Example 3](https://raw.githubusercontent.com/migius/trice-boardgame/master/Art/example3.svg)
+_ordered value Trice_
+![Example 4](https://raw.githubusercontent.com/migius/trice-boardgame/master/Art/example4.svg)
+_NOT a valid Trice (same color **AND** ordered value)_
 
 ## Credits
-Version: 0.1.1
+Version: 0.2.0
 Author: Michele Bruni  
 Playtester: _your name can be here!_  
 Thanks to: @Seraphine82, @XendoBreckett
