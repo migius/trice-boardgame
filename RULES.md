@@ -33,13 +33,13 @@ A _Trice_ is composed by three dice horizontally, vertically or diagonally align
 * same value
 * ordered value (e.g. 2, 3, 4)
 
-![Example 1](https://raw.githubusercontent.com/migius/trice-boardgame/master/Art/example1.svg)
-_same color Trice_
-![Example 2](https://raw.githubusercontent.com/migius/trice-boardgame/master/Art/example2.svg)
-_same value Trice_
-![Example 3](https://raw.githubusercontent.com/migius/trice-boardgame/master/Art/example3.svg)
-_ordered value Trice_
-![Example 4](https://raw.githubusercontent.com/migius/trice-boardgame/master/Art/example4.svg)
+![Example 1](https://raw.githubusercontent.com/migius/trice-boardgame/master/Art/example1.svg)  
+_same color Trice_  
+![Example 2](https://raw.githubusercontent.com/migius/trice-boardgame/master/Art/example2.svg)  
+_same value Trice_  
+![Example 3](https://raw.githubusercontent.com/migius/trice-boardgame/master/Art/example3.svg)  
+_ordered value Trice_  
+![Example 4](https://raw.githubusercontent.com/migius/trice-boardgame/master/Art/example4.svg)  
 _NOT a valid Trice (same color **AND** ordered value)_
 
 ## Credits
