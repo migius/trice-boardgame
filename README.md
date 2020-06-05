@@ -1,7 +1,7 @@
 # trice-boardgame
 TRICE is a boardgame desgned for "2020 1-Card Game Print and Play Design Contest"
 
-![Logo](https://raw.githubusercontent.com/migius/trice-boardgame/master/Art/logo.png)
+![Logo](https://raw.githubusercontent.com/migius/trice-boardgame/master/Art/logo.svg)
 
 in this repository you can find:
 - [x] [RULES](https://github.com/migius/trice-boardgame/blob/master/RULES.md)
