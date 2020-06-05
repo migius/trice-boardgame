@@ -43,7 +43,7 @@ _ordered value Trice_
 _NOT a valid Trice (same color **AND** ordered value)_
 
 ## Credits
-Version: 0.2.0
+Version: 0.2.0  
 Author: Michele Bruni  
 Playtester: _your name can be here!_  
 Thanks to: @Seraphine82, @XendoBreckett
