@@ -46,5 +46,5 @@ _NOT a valid Trice (same color **AND** ordered value)_
 Version: 0.2.0  
 Author: Michele Bruni  
 Playtester: _your name can be here!_  
-Thanks to: @Seraphine82, @XendoBreckett
+Thanks to: @Seraphine82, @XendoBreckett  
 Created for: _2020 - 1 Card Print and Play Design Contest_
