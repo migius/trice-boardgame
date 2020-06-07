@@ -20,37 +20,7 @@
    inkscape:export-xdpi="299"
    inkscape:export-ydpi="299">
   <defs
-     id="defs2">
-    <meshgradient
-       inkscape:collect="always"
-       id="meshgradient6160"
-       gradientUnits="userSpaceOnUse"
-       x="110.34954"
-       y="108.82742">
-      <meshrow
-         id="meshrow6162">
-        <meshpatch
-           id="meshpatch6164">
-          <stop
-             path="c 14.7084,0  29.4168,0  44.1252,0"
-             style="stop-color:#ffffff;stop-opacity:1"
-             id="stop6166" />
-          <stop
-             path="c 0,2.81189  0,5.62377  0,8.43566"
-             style="stop-color:#800080;stop-opacity:1"
-             id="stop6168" />
-          <stop
-             path="c -14.7084,0  -29.4168,0  -44.1252,0"
-             style="stop-color:#ffffff;stop-opacity:1"
-             id="stop6170" />
-          <stop
-             path="c 0,-2.81189  0,-5.62377  0,-8.43566"
-             style="stop-color:#800080;stop-opacity:1"
-             id="stop6172" />
-        </meshpatch>
-      </meshrow>
-    </meshgradient>
-  </defs>
+     id="defs2" />
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -90,6 +60,15 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(-92.901879,-108.82742)">
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.79374999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect300"
+       width="71.815475"
+       height="35.057293"
+       x="90.44503"
+       y="96.229668"
+       inkscape:export-xdpi="299"
+       inkscape:export-ydpi="299" />
     <g
        id="g3886"
        transform="matrix(0.82411558,0,0,0.82411558,12.679919,18.776423)"
