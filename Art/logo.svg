@@ -17,51 +17,40 @@
    inkscape:version="0.92.0 r15299"
    sodipodi:docname="logo.svg"
    inkscape:export-filename="C:\Users\U505814\Documents\GitHub\trice-boardgame\Art\logo.png"
-   inkscape:export-xdpi="300.33139"
-   inkscape:export-ydpi="300.33139">
+   inkscape:export-xdpi="299"
+   inkscape:export-ydpi="299">
   <defs
      id="defs2">
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-<meshgradient
-   inkscape:collect="always"
-   id="meshgradient6160"
-   gradientUnits="userSpaceOnUse"
-   x="110.34954"
-   y="108.82742">
-  <meshrow
-     id="meshrow6162">
-    <meshpatch
-       id="meshpatch6164">
-      <stop
-         path="c 14.7084,0  29.4168,0  44.1252,0"
-         style="stop-color:#ffffff;stop-opacity:1"
-         id="stop6166" />
-      <stop
-         path="c 0,2.81189  0,5.62377  0,8.43566"
-         style="stop-color:#800080;stop-opacity:1"
-         id="stop6168" />
-      <stop
-         path="c -14.7084,0  -29.4168,0  -44.1252,0"
-         style="stop-color:#ffffff;stop-opacity:1"
-         id="stop6170" />
-      <stop
-         path="c 0,-2.81189  0,-5.62377  0,-8.43566"
-         style="stop-color:#800080;stop-opacity:1"
-         id="stop6172" />
-    </meshpatch>
-  </meshrow>
-</meshgradient>
-</defs>
+    <meshgradient
+       inkscape:collect="always"
+       id="meshgradient6160"
+       gradientUnits="userSpaceOnUse"
+       x="110.34954"
+       y="108.82742">
+      <meshrow
+         id="meshrow6162">
+        <meshpatch
+           id="meshpatch6164">
+          <stop
+             path="c 14.7084,0  29.4168,0  44.1252,0"
+             style="stop-color:#ffffff;stop-opacity:1"
+             id="stop6166" />
+          <stop
+             path="c 0,2.81189  0,5.62377  0,8.43566"
+             style="stop-color:#800080;stop-opacity:1"
+             id="stop6168" />
+          <stop
+             path="c -14.7084,0  -29.4168,0  -44.1252,0"
+             style="stop-color:#ffffff;stop-opacity:1"
+             id="stop6170" />
+          <stop
+             path="c 0,-2.81189  0,-5.62377  0,-8.43566"
+             style="stop-color:#800080;stop-opacity:1"
+             id="stop6172" />
+        </meshpatch>
+      </meshrow>
+    </meshgradient>
+  </defs>
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -92,7 +81,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -141,64 +130,49 @@
     </g>
     <g
        id="g3704"
-       transform="matrix(0.26458333,0,0,0.26458333,91.695085,114.4767)">
-</g>
+       transform="matrix(0.26458333,0,0,0.26458333,91.695085,114.4767)" />
     <g
        id="g3706"
-       transform="matrix(0.26458333,0,0,0.26458333,91.695085,114.4767)">
-</g>
+       transform="matrix(0.26458333,0,0,0.26458333,91.695085,114.4767)" />
     <g
        id="g3708"
-       transform="matrix(0.26458333,0,0,0.26458333,91.695085,114.4767)">
-</g>
+       transform="matrix(0.26458333,0,0,0.26458333,91.695085,114.4767)" />
     <g
        id="g3710"
-       transform="matrix(0.26458333,0,0,0.26458333,91.695085,114.4767)">
-</g>
+       transform="matrix(0.26458333,0,0,0.26458333,91.695085,114.4767)" />
     <g
        id="g3712"
-       transform="matrix(0.26458333,0,0,0.26458333,91.695085,114.4767)">
-</g>
+       transform="matrix(0.26458333,0,0,0.26458333,91.695085,114.4767)" />
     <g
        id="g3714"
-       transform="matrix(0.26458333,0,0,0.26458333,91.695085,114.4767)">
-</g>
+       transform="matrix(0.26458333,0,0,0.26458333,91.695085,114.4767)" />
     <g
        id="g3716"
-       transform="matrix(0.26458333,0,0,0.26458333,91.695085,114.4767)">
-</g>
+       transform="matrix(0.26458333,0,0,0.26458333,91.695085,114.4767)" />
     <g
        id="g3718"
-       transform="matrix(0.26458333,0,0,0.26458333,91.695085,114.4767)">
-</g>
+       transform="matrix(0.26458333,0,0,0.26458333,91.695085,114.4767)" />
     <g
        id="g3720"
-       transform="matrix(0.26458333,0,0,0.26458333,91.695085,114.4767)">
-</g>
+       transform="matrix(0.26458333,0,0,0.26458333,91.695085,114.4767)" />
     <g
        id="g3722"
-       transform="matrix(0.26458333,0,0,0.26458333,91.695085,114.4767)">
-</g>
+       transform="matrix(0.26458333,0,0,0.26458333,91.695085,114.4767)" />
     <g
        id="g3724"
-       transform="matrix(0.26458333,0,0,0.26458333,91.695085,114.4767)">
-</g>
+       transform="matrix(0.26458333,0,0,0.26458333,91.695085,114.4767)" />
     <g
        id="g3726"
-       transform="matrix(0.26458333,0,0,0.26458333,91.695085,114.4767)">
-</g>
+       transform="matrix(0.26458333,0,0,0.26458333,91.695085,114.4767)" />
     <g
        id="g3728"
-       transform="matrix(0.26458333,0,0,0.26458333,91.695085,114.4767)">
-</g>
+       transform="matrix(0.26458333,0,0,0.26458333,91.695085,114.4767)" />
     <g
        id="g3730"
-       transform="matrix(0.26458333,0,0,0.26458333,91.695085,114.4767)">
-</g>
+       transform="matrix(0.26458333,0,0,0.26458333,91.695085,114.4767)" />
     <g
        id="g3732"
-       transform="matrix(0.26458333,0,0,0.26458333,91.695085,114.4767)">
-</g>
+       transform="matrix(0.26458333,0,0,0.26458333,91.695085,114.4767)" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:6.61458302px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
