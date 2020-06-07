@@ -2,7 +2,7 @@
 
 # TRICE
 Connect 3 with dice in a **trice**
-> age 8+ | 2 players | 5 minutes
+> age 8+ | 2 players | 5-10 minutes
 
 ## Components
 1. One card
