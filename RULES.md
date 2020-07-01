@@ -23,19 +23,19 @@ Connect 3 with dice in a **trice**
 The first player places the die chosen by the opponent in a free square on the card, there are no placement restrictions. After placement: if a _Trice_ is created the player who placed the die wins the game immediately or if a _Double Trice_ is created he loses immediately.  
 If no _Trice_ is created the player who placed the die chooses another die for the opponent and a new turn begins.
 ### Board completed
-If the board is complete the player that place the last die must indicate a dice on the board, in the next turn the other player must swap the chosen die with one adjacent die. After that he must increment the value of one of swapped dice by one (a 6 becomes 1), check if he make a _Trice_ **only after value change**, in this case the game ends immediately. The game will continue with this rule untill a player make a _Trice_.
+If the board is complete the player that places the last die must indicate a die on the board. For his next turn, the other player must swap the chosen die with one adjacent die. After that he must increment the value of one of the swapped die by one (a 6 becomes 1), and check if he makes a _Trice_ **only after the value change**. If so, the game ends immediately. The game will continue with this rule until a player makes a _Trice_.
 
 ## End of the game
-When a player makes a _Trice_ on the board the game ends immediately and the player who placed the die wins. If a player make a _Double Trice_ he lose immediately.
+When a player makes a _Trice_ on the board the game ends immediately and the player who placed the die wins. If a player makes a _Double Trice_ he loses immediately.
 
 ## _Trice_
-A _Trice_ is composed by three dice horizontally, vertically or diagonally aligned with __only__ one of these conditions:
+A _Trice_ is composed of three dice horizontally, vertically or diagonally aligned with __only__ one of these conditions:
 * same color
 * same value
 * ordered value (e.g. 2, 3, 4)
 
 ### _Double Trice_
-If there are __two__ conditions in the same three dice the player lose immediately.
+If there are __two__ conditions in the same three dice the player loses immediately.
 
 ## Examples
 ![Example 1](https://raw.githubusercontent.com/migius/trice-boardgame/master/Art/example1.svg)  
@@ -48,8 +48,8 @@ _ordered value Trice_
 _Double Trice (same color **AND** ordered value)_
 
 ## Credits
-Version: 0.3.0  
+Version: 0.3.1
 Author: Michele Bruni  
 Playtester: _your name can be here!_  
-Thanks to: @Seraphine82, @XendoBreckett  
+Thanks to: @Seraphine82, @XendoBreckett, @kevinplaysgames  
 Created for: _2020 - 1 Card Print and Play Design Contest_

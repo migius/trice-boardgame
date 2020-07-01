@@ -128,15 +128,15 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.7"
-     inkscape:cx="544.91823"
-     inkscape:cy="410.69291"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="598.74042"
+     inkscape:cy="404.99316"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1600"
-     inkscape:window-height="837"
-     inkscape:window-x="-8"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="1592"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
      showguides="true" />
@@ -148,7 +148,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -648,7 +648,7 @@
          x="111.00449"
          y="-88.763916"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:1.61000001px;font-family:'Courier New';-inkscape-font-specification:'Courier New';stroke-width:0.26458332"
-         id="tspan6544">TRICE version 0.3.0</tspan><tspan
+         id="tspan6544">TRICE version 0.3.1</tspan><tspan
          sodipodi:role="line"
          x="111.00449"
          y="-85.047081"
@@ -848,29 +848,29 @@
            x="486.89352"
            y="-191.19794"
            style="text-align:justify;text-anchor:start" /></flowRegion><flowPara
-         style="font-size:12.00000015px;line-height:4.91338589px;text-align:justify;letter-spacing:0.82000004px;text-anchor:start"
+         style="font-size:12px;line-height:4.91338587px;text-align:justify;letter-spacing:0.82000005px;text-anchor:start"
          id="flowPara3516">If no <flowSpan
-   style="font-style:italic;font-size:12.00000015px;line-height:4.91338589px;letter-spacing:0.82000004px"
+   style="font-style:italic;font-size:12px;line-height:4.91338587px;letter-spacing:0.82000005px"
    id="flowSpan3504">Trice</flowSpan> is created the player who placed the die chooses another die for the opponent and a new turn begins.</flowPara><flowPara
-         style="font-size:12.00000015px;line-height:4.91338589px;text-align:justify;letter-spacing:0.82000004px;text-anchor:start"
+         style="font-size:12px;line-height:4.91338587px;text-align:justify;letter-spacing:0.82000005px;text-anchor:start"
          id="flowPara8816" /><flowPara
-         style="font-weight:bold;font-size:12.00000015px;line-height:4.91338589px;text-align:justify;letter-spacing:0.82000004px;text-anchor:start"
+         style="font-weight:bold;font-size:12px;line-height:4.91338587px;text-align:justify;letter-spacing:0.82000005px;text-anchor:start"
          id="flowPara3506">BOARD COMPLETED</flowPara><flowPara
-         style="font-weight:normal;font-size:12.00000015px;line-height:4.91338589px;text-align:justify;letter-spacing:0.82000004px;text-anchor:start"
-         id="flowPara3508">If the board is complete the player that place the last die must indicate a dice on the board, in the next turn the other player must swap the chosen die with one adjacent die. </flowPara><flowPara
-         style="font-weight:normal;font-size:11.73333348px;line-height:4.91338589px;text-align:justify;letter-spacing:1px;text-anchor:start"
+         style="font-weight:normal;font-size:12px;line-height:4.91338587px;text-align:justify;letter-spacing:0.82000005px;text-anchor:start"
+         id="flowPara3508">If the board is complete the player that places the last die must indicate a die on the board. For his next turn, the other player must swap the chosen die with one adjacent die. </flowPara><flowPara
+         style="font-weight:normal;font-size:11.73333359px;line-height:4.91338587px;text-align:justify;letter-spacing:1px;text-anchor:start"
          id="flowPara8807"><flowSpan
-   style="font-size:12.00000015px;line-height:4.91338589px;letter-spacing:0.82000004px"
-   id="flowSpan8818">After that he must increment the value of one of swapped dice by one (a 6 becomes 1), check if he make a </flowSpan><flowSpan
-   style="font-style:italic;font-size:12.00000015px;line-height:4.91338589px;letter-spacing:0.82000004px"
+   style="font-size:12px;line-height:4.91338587px;letter-spacing:0.82000005px"
+   id="flowSpan8818">After that he must increment the value of one of the swapped die by one (a 6 becomes 1), and check if he makes a </flowSpan><flowSpan
+   style="font-style:italic;font-size:12px;line-height:4.91338587px;letter-spacing:0.82000005px"
    id="flowSpan3510">Trice</flowSpan><flowSpan
-   style="font-size:12.00000015px;line-height:4.91338589px;letter-spacing:0.82000004px"
+   style="font-size:12px;line-height:4.91338587px;letter-spacing:0.82000005px"
    id="flowSpan8820"> </flowSpan><flowSpan
-   style="font-weight:bold;font-size:12.00000015px;line-height:4.91338589px;letter-spacing:0.82000004px"
-   id="flowSpan3512">only after value change</flowSpan><flowSpan
-   style="font-size:12.00000015px;line-height:4.91338589px;letter-spacing:0.82000004px"
-   id="flowSpan8822">, in this case the game ends immediately. The game will continue with this rule untill </flowSpan>a player make a <flowSpan
-   style="font-style:italic;font-size:11.73333348px;line-height:4.91338589px"
+   style="font-weight:bold;font-size:12px;line-height:4.91338587px;letter-spacing:0.82000005px"
+   id="flowSpan3512">only after the value change</flowSpan><flowSpan
+   style="font-size:12px;line-height:4.91338587px;letter-spacing:0.82000005px"
+   id="flowSpan8822">. If so, the game ends immediately. The game will continue with this rule until </flowSpan>a player makes a <flowSpan
+   style="font-style:italic;font-size:11.73333359px;line-height:4.91338587px"
    id="flowSpan3514">Trice</flowSpan>.</flowPara></flowRoot>    <rect
        y="-157.39876"
        x="108.69047"
@@ -3562,7 +3562,7 @@
          id="flowPara7983"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:6.42519712px;font-family:'Sitka Small';-inkscape-font-specification:'Sitka Small';text-align:justify;text-anchor:start">A <flowSpan
    style="font-style:italic;font-size:12px;line-height:6.42519712px"
-   id="flowSpan8107">trice</flowSpan> is composed by three dice horizontally, vertically or diagonally aligned with <flowSpan
+   id="flowSpan8107">trice</flowSpan> is composed of three dice horizontally, vertically or diagonally aligned with <flowSpan
    style="font-weight:bold;font-size:12px;line-height:6.42519712px"
    id="flowSpan8109">only</flowSpan> one of these conditions:</flowPara><flowPara
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:6.42519712px;font-family:'Sitka Small';-inkscape-font-specification:'Sitka Small';text-align:justify;text-anchor:start"
@@ -3578,7 +3578,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:6.42519712px;font-family:'Sitka Small';-inkscape-font-specification:'Sitka Small';text-align:justify;text-anchor:start"
          id="flowPara4662">If there are <flowSpan
    style="font-weight:bold"
-   id="flowSpan4664">two</flowSpan> conditions in the same three dice the player lose immediately.</flowPara><flowPara
+   id="flowSpan4664">two</flowSpan> conditions in the same three dice the player loses immediately.</flowPara><flowPara
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:6.42519712px;font-family:'Sitka Small';-inkscape-font-specification:'Sitka Small';text-align:justify;text-anchor:start"
          id="flowPara4656" /></flowRoot>    <rect
        y="157.39876"
@@ -4958,13 +4958,13 @@
            height="84.852814"
            width="210.11174"
            id="rect10738" /></flowRegion><flowPara
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.33333397px;line-height:7.55905533px;font-family:'Sitka Small';-inkscape-font-specification:'Sitka Small';text-align:justify;text-anchor:start"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:7.55905533px;font-family:'Sitka Small';-inkscape-font-specification:'Sitka Small';text-align:justify;text-anchor:start"
          id="flowPara10754">Author: Michele Bruni</flowPara><flowPara
-         id="flowPara5515"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.33333397px;line-height:7.55905533px;font-family:'Sitka Small';-inkscape-font-specification:'Sitka Small';text-align:justify;text-anchor:start">Thanks to: @Seraphine82, @XendoBreckett  </flowPara><flowPara
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.33333397px;line-height:7.55905533px;font-family:'Sitka Small';-inkscape-font-specification:'Sitka Small';text-align:justify;text-anchor:start"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:7.55905533px;font-family:'Sitka Small';-inkscape-font-specification:'Sitka Small';text-align:justify;text-anchor:start"
+         id="flowPara3440">Thanks to: @kevinplaysgames, @Seraphine82, @XendoBreckett  </flowPara><flowPara
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:7.55905533px;font-family:'Sitka Small';-inkscape-font-specification:'Sitka Small';text-align:justify;text-anchor:start"
          id="flowPara10785">Created for: <flowSpan
-   style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Sitka Small';-inkscape-font-specification:'Sitka Small Italic'"
+   style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;font-family:'Sitka Small';-inkscape-font-specification:'Sitka Small Italic'"
    id="flowSpan10787">2020 - 1 Card Print and Play Design Contest</flowSpan></flowPara></flowRoot>    <image
        y="-207.71658"
        x="-135.41908"
@@ -6798,12 +6798,12 @@
            height="213.27196"
            width="217.96889"
            id="rect7808" /></flowRegion><flowPara
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.00000079px;line-height:6.42519693px;font-family:'Sitka Small';-inkscape-font-specification:'Sitka Small';text-align:justify;letter-spacing:1px;text-anchor:start"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.00000095px;line-height:6.42519712px;font-family:'Sitka Small';-inkscape-font-specification:'Sitka Small';text-align:justify;letter-spacing:1px;text-anchor:start"
          id="flowPara7824">When a player makes a <flowSpan
-   style="font-style:italic;line-height:6.42519693px;letter-spacing:1px;font-size:12.00000079px"
-   id="flowSpan7855">trice</flowSpan> on the board the game ends immediately and the player who placed the die wins. If a player make a <flowSpan
-   style="font-style:italic;line-height:6.42519693px;font-size:12.00000079px"
-   id="flowSpan3518">Double Trice</flowSpan> he lose immediately.</flowPara></flowRoot>    <rect
+   style="font-style:italic;font-size:12.00000095px;line-height:6.42519712px;letter-spacing:1px"
+   id="flowSpan7855">trice</flowSpan> on the board the game ends immediately and the player who placed the die wins. If a player mskes a <flowSpan
+   style="font-style:italic;font-size:12.00000095px;line-height:6.42519712px"
+   id="flowSpan3518">Double Trice</flowSpan> he loses immediately.</flowPara></flowRoot>    <rect
        style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.08402418;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:0.08402418, 0.08402418000000000;stroke-dashoffset:0;stroke-opacity:1"
        id="rect6793-2"
        width="24.915976"
