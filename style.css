@@ -34,6 +34,13 @@ footer.footer.mt-auto.py-3 {
     background-image: url(images/dice/empty.svg);
 }
 
+.game-cell.blue {
+    background-color: blue;
+}
+.game-cell.red {
+    background-color: red;
+}
+
 .dice:after {
     display: flex;
     align-items: center;
@@ -57,10 +64,8 @@ footer.footer.mt-auto.py-3 {
     box-shadow: 0px 0px 13px 8px blue;
 }
 
-.dice.moved:after {
-    border-radius: 6px;
-    box-shadow: 0px 0px 8px 6px black;
-
+.dice.moved {
+    background-color: #333;
 }
 
 

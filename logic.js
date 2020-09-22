@@ -141,7 +141,6 @@ var trice = new Vue({
                         this.rows[selectedRow].columns[selectedColumn].pips++;
 
                         this.movedDice = [];
-                        this.NextPlayer();
                     }
                     else {
                       return;
