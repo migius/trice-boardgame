@@ -46,9 +46,23 @@ footer.footer.mt-auto.py-3 {
 }
 
 .dice.selected:after {
-    box-shadow: 0px 0px 13px 8px red;
     border-radius: 6px;
 }
+
+.dice.selected.red:after {
+    box-shadow: 0px 0px 13px 8px red;
+}
+
+.dice.selected.blue:after {
+    box-shadow: 0px 0px 13px 8px blue;
+}
+
+.dice.moved:after {
+    border-radius: 6px;
+    box-shadow: 0px 0px 8px 6px black;
+
+}
+
 
 .w.pips-1:after { background-image: url(images/dice/d1w.svg); }
 .w.pips-2:after { background-image: url(images/dice/d2w.svg); }
