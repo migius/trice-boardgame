@@ -23,6 +23,18 @@ var trice = new Vue({
                 columns: [new EmptyCell(),new EmptyCell(),new EmptyCell(),new EmptyCell()]
             }
             ],
+        tricePositions: [[[0,0],[0,1],[0,2]],[[0,1],[0,2],[0,3]], //1st row
+                         [[1,0],[1,1],[1,2]],[[1,1],[1,2],[1,3]], //2nd row
+                         [[2,0],[2,1],[2,2]],[[2,1],[2,2],[2,3]], //3rd row
+                         [[0,0],[1,0],[2,0]], //1st col
+                         [[0,1],[1,1],[2,1]], //2nd col
+                         [[0,2],[1,2],[2,2]], //3rd col
+                         [[0,3],[1,3],[2,3]], //4th col
+                         [[0,0],[1,1],[2,2]], //  \-
+                         [[0,1],[1,2],[2,3]], //  -\
+                         [[2,0],[1,1],[0,2]], //  /-
+                         [[2,1],[1,2],[0,3]]  //  -/
+                         ],
         diceColors: ["w","o","p"],
         numberOfDice: 4,
         dice: [],
@@ -31,13 +43,17 @@ var trice = new Vue({
         selectedDieId: -1,
         selectedRow: -1,
         selectedColumn: -1,
+        winnerPlayerIndex: -1,        
         movedDice: [] //dice moved in board completed
     },
     computed: {         
         boardCompleted: function() {return this.dice.length === 0},
         currentPlayer: function(){ return this.players[this.currPlayerIndex]},
         nextMoveDescription: function(){
-                if(!this.boardCompleted) {
+                if(this.winnerPlayerIndex >= 0) {
+                    return this.currentPlayer.name + " is the winner!";
+                }
+                else if(!this.boardCompleted) {
                     if(this.selectedDieId === -1) {
                         //select die
                         return this.currentPlayer.name + " must select a die.";
@@ -69,10 +85,61 @@ var trice = new Vue({
         DoNothing: function(){
             console.log(this.numberOfDice);
         },
+        CheckWinCondition: function(){
+            //per ogni possibile trice
+            for (var i = this.tricePositions.length - 1; i >= 0; i--) {
+                d1 = trice.rows[trice.tricePositions[i][0][0]].columns[trice.tricePositions[i][0][1]];
+                d2 = trice.rows[trice.tricePositions[i][1][0]].columns[trice.tricePositions[i][1][1]];
+                d3 = trice.rows[trice.tricePositions[i][2][0]].columns[trice.tricePositions[i][2][1]];
+
+                //console.log(trice.tricePositions[i]);
+                let winCond = 0;
+
+                //check there are 3 dice
+                if(d1.class().includes("empty") || d2.class().includes("empty") || d3.class().includes("empty")) continue;
+
+                //color check
+                if(d1.color === d2.color && d2.color === d3.color) winCond++;
+
+                //pips check
+                if(d1.pips === d2.pips && d2.pips === d3.pips) winCond++;
+
+                //order check
+                if(d1.pips === d2.pips + 1 && d2.pips === d3.pips + 1) winCond++;
+                if(d1.pips === d2.pips - 1 && d2.pips === d3.pips - 1) winCond++;
+
+
+
+
+                //final check
+                if(winCond === 0) { 
+                    console.log("no win/lose");
+                    return;
+                }
+
+                d1.isWinningDie = true;
+                d2.isWinningDie = true;
+                d3.isWinningDie = true;
+
+                if(winCond === 1) { 
+                    console.log("WIN!"); 
+                    this.winnerPlayerIndex = this.currPlayerIndex;
+                }
+                else { 
+                    console.log("LOSE!"); 
+                    this.winnerPlayerIndex = this.NextPlayer;
+                }
+
+            }
+
+        },
         NextPlayer: function() {
             this.currPlayerIndex = this.currPlayerIndex === 1 ? 0 : 1;
         },
         SelectDiePool: function(event) {
+            //game ended
+            if(this.winnerPlayerIndex >= 0) return;
+            
             //can't change selection
             if(this.selectedDieId >= 0) return;
 
@@ -83,6 +150,9 @@ var trice = new Vue({
         },
         SelectCell: function(event) {
             if(!this.boardCompleted) {
+                //game ended
+                if(this.winnerPlayerIndex >= 0) return;
+
                 /*PLACE DIE*/
                 //no die selected
                 if(this.selectedDieId < 0) return;
@@ -98,6 +168,9 @@ var trice = new Vue({
                 this.rows[selectedRow].columns[selectedColumn] = this.dice[dieIndex];
                 this.dice.splice(dieIndex, 1);
                 this.selectedDieId = -1;
+
+                //check for win or loose
+                this.CheckWinCondition();
 
             } else {
                 if(this.selectedDieId >= 0) {
@@ -141,6 +214,9 @@ var trice = new Vue({
                         this.rows[selectedRow].columns[selectedColumn].pips++;
 
                         this.movedDice = [];
+
+                        //check for win or loose
+                        this.CheckWinCondition();
                     }
                     else {
                       return;
@@ -186,10 +262,12 @@ function Die(id, color, pips) {
         s += "pips-" + this.pips.toString() + " ";
         if(this.selected()) { s += "selected " + trice.currentPlayer.color  + " ";}
         if(trice.movedDice.length > 1 && (trice.movedDice[0].id == this.id || trice.movedDice[1].id == this.id)) { s += "moved "; }
+        if(this.isWinningDie) { s += "winning " + trice.players[trice.winnerPlayerIndex].color; }
         return s;
     }
     this.selected = function() { return this.id === trice.selectedDieId};
     this.elementId = function() { return "dice-" + this.id;};
+    this.isWinningDie = false;
 }
 
 function RollDice(trice){

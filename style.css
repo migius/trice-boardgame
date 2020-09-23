@@ -41,6 +41,9 @@ footer.footer.mt-auto.py-3 {
     background-color: red;
 }
 
+p.blue {color: blue;}
+p.red {color: red;}
+
 .dice:after {
     display: flex;
     align-items: center;

@@ -20,7 +20,7 @@
     <h4>Connect 3 with dice in a trice</h4>
     <hr />
 
-    <p>{{nextMoveDescription}}</p>
+    <p v-bind:class="currentPlayer.color" >{{nextMoveDescription}}</p>
 
     <div class="game row">
         <div class="board-space col">
