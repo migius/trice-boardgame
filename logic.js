@@ -48,10 +48,12 @@ var trice = new Vue({
     },
     computed: {         
         boardCompleted: function() {return this.dice.length === 0},
-        currentPlayer: function(){ return this.players[this.currPlayerIndex]},
+        currentPlayer: function() {return this.players[this.currPlayerIndex]},
+        nextPlayerIndex: function() {return this.currPlayerIndex === 1 ? 0 : 1; },
         nextMoveDescription: function(){
                 if(this.winnerPlayerIndex >= 0) {
-                    return this.currentPlayer.name + " is the winner!";
+                    this.currPlayerIndex = this.winnerPlayerIndex;
+                    return this.players[this.winnerPlayerIndex].name + " is the winner!";
                 }
                 else if(!this.boardCompleted) {
                     if(this.selectedDieId === -1) {
@@ -82,8 +84,8 @@ var trice = new Vue({
             }
     },
     methods: { 
-        DoNothing: function(){
-            console.log(this.numberOfDice);
+        UndoMove: function(){
+            console.log("todo");
         },
         CheckWinCondition: function(){
             //per ogni possibile trice
@@ -114,7 +116,7 @@ var trice = new Vue({
                 //final check
                 if(winCond === 0) { 
                     console.log("no win/lose");
-                    return;
+                    continue;
                 }
 
                 d1.isWinningDie = true;
@@ -127,14 +129,13 @@ var trice = new Vue({
                 }
                 else { 
                     console.log("LOSE!"); 
-                    this.winnerPlayerIndex = this.NextPlayer;
+                    this.winnerPlayerIndex = this.nextPlayerIndex;
                 }
 
             }
-
         },
         NextPlayer: function() {
-            this.currPlayerIndex = this.currPlayerIndex === 1 ? 0 : 1;
+            this.currPlayerIndex = this.nextPlayerIndex;
         },
         SelectDiePool: function(event) {
             //game ended

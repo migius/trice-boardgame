@@ -23,15 +23,15 @@
     <p v-bind:class="currentPlayer.color" >{{nextMoveDescription}}</p>
 
     <div class="game row">
-        <div class="board-space col">
+        <div class="board-space col-12 col-md-6">
             <div class="board" >
                 <div v-for="(row, iRow) of rows" class="row">    
                     <div v-for="(column, iColumn) of row.columns" class="col game-cell" v-bind:class="column.class()" v-on:click="SelectCell" v-bind:id="'cell-' + iRow.toString() + '-' + iColumn.toString()" ></div>              
                 </div>       
             </div>
         </div>
-        <div class="dice-pool col row" >
-            <div v-for="die of dice" class="col" v-bind:class="die.class()" v-on:click="SelectDiePool" v-bind:id="die.elementId()" > </div>            
+        <div class="dice-pool col row mt-2 mt-md-0" >
+            <div v-for="die of dice" class="col-3 col-md-2" v-bind:class="die.class()" v-on:click="SelectDiePool" v-bind:id="die.elementId()" > </div>            
         </div>
     </div>
 </div>
