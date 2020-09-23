@@ -51,6 +51,7 @@ var trice = new Vue({
         currentPlayer: function() {return this.players[this.currPlayerIndex]},
         nextPlayerIndex: function() {return this.currPlayerIndex === 1 ? 0 : 1; },
         nextMoveDescription: function(){
+                if(this.dice.length === 0) return "";
                 if(this.winnerPlayerIndex >= 0) {
                     this.currPlayerIndex = this.winnerPlayerIndex;
                     return this.players[this.winnerPlayerIndex].name + " is the winner!";
@@ -88,6 +89,9 @@ var trice = new Vue({
             console.log("todo");
         },
         CheckWinCondition: function(){
+
+            let winningTrice = [];
+
             //per ogni possibile trice
             for (var i = this.tricePositions.length - 1; i >= 0; i--) {
                 d1 = trice.rows[trice.tricePositions[i][0][0]].columns[trice.tricePositions[i][0][1]];
@@ -111,28 +115,53 @@ var trice = new Vue({
                 if(d1.pips === d2.pips - 1 && d2.pips === d3.pips - 1) winCond++;
 
 
-
-
                 //final check
                 if(winCond === 0) { 
                     console.log("no win/lose");
                     continue;
                 }
 
-                d1.isWinningDie = true;
-                d2.isWinningDie = true;
-                d3.isWinningDie = true;
 
                 if(winCond === 1) { 
                     console.log("WIN!"); 
-                    this.winnerPlayerIndex = this.currPlayerIndex;
+                    winningTrice.push({winner: this.currPlayerIndex, dice: [d1,d2,d3], isLose: false});
                 }
                 else { 
+                    //if a player make a double trice he lose and don't check for others winning conditions
                     console.log("LOSE!"); 
-                    this.winnerPlayerIndex = this.nextPlayerIndex;
+                    winningTrice = [{winner: this.nextPlayerIndex, dice: [d1,d2,d3], isLose: true}];
+                    break;
                 }
-
             }
+
+            if(winningTrice.length === 1)
+            {                
+                winningTrice[0].dice[0].isWinningDie = true;
+                winningTrice[0].dice[1].isWinningDie = true;
+                winningTrice[0].dice[2].isWinningDie = true;
+
+                this.winnerPlayerIndex  = winningTrice[0].winner;
+            }
+            else if(winningTrice.length > 1)
+            {
+                //multiple winning conditions... (only possible on isLose false)
+
+                this.winnerPlayerIndex  = winningTrice[0].winner;
+                
+                for (var i =  winningTrice.length - 1; i >= 0; i--) {
+                    if(winningTrice[i].isLose)
+                    {
+                        alert("ERROR! -- isLose in multiple winning conditions!");
+                    }
+  
+                    winningTrice[i].dice[0].isWinningDie = true;
+                    winningTrice[i].dice[1].isWinningDie = true;
+                    winningTrice[i].dice[2].isWinningDie = true;
+
+
+                }
+            }
+
         },
         NextPlayer: function() {
             this.currPlayerIndex = this.nextPlayerIndex;
@@ -237,7 +266,8 @@ var trice = new Vue({
         }
     },
     mounted: function() {
-        RollDice(this.$data);
+        //RollDice(this.$data);
+        $('#startModal').modal();
     }
 });
 
@@ -271,11 +301,12 @@ function Die(id, color, pips) {
     this.isWinningDie = false;
 }
 
-function RollDice(trice){
-    for (var i = trice.diceColors.length - 1; i >= 0; i--) {
-        const col = trice.diceColors[i];
-        for (var j = trice.numberOfDice-1; j >= 0; j--) {
-            trice.dice.push(new Die(i*trice.numberOfDice+j, col, Math.ceil(Math.random()*6)));
+function RollDice(tr){
+    tr.dice = [];
+    for (var i = tr.diceColors.length - 1; i >= 0; i--) {
+        const col = tr.diceColors[i];
+        for (var j = tr.numberOfDice-1; j >= 0; j--) {
+            tr.dice.push(new Die(i*tr.numberOfDice+j, col, Math.ceil(Math.random()*6)));
         }
     }
 }
