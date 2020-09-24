@@ -5,11 +5,12 @@ footer.footer.mt-auto.py-3 {
 */
 
 .board {
-    max-height: 70vh;
+    /*max-height: 70vh;*/
     display: flex;
     flex-direction: column;
-    height: 240px;
-    max-width: 320px;    
+    /*height: 240px;*/
+    /*max-width: 320px;    */    
+    width: max-content;
     margin: 0 auto;
 }
 
@@ -21,6 +22,7 @@ footer.footer.mt-auto.py-3 {
     background-color: #ccc;
     border: 2px solid white;
     padding: 13px 16px 13px 16px;
+    max-width: 87.5px;
 }
 
 .game-cell.empty:after {
@@ -94,3 +96,14 @@ p.red {color: red;}
 .p.pips-5:after { background-image: url(images/dice/d5p.svg); }
 .p.pips-6:after { background-image: url(images/dice/d6p.svg); }
 
+
+.dr-0:after { transform: rotate(1deg); }
+.dr-1:after { transform: rotate(2deg); }
+.dr-2:after { transform: rotate(3deg); }
+.dr-3:after { transform: rotate(4deg); }
+.dr-4:after { transform: rotate(5deg); }
+.dr-5:after { transform: rotate(-1deg); }
+.dr-6:after { transform: rotate(-2deg); }
+.dr-7:after { transform: rotate(-3deg); }
+.dr-8:after { transform: rotate(-4deg); }
+.dr-9:after { transform: rotate(-5deg); }

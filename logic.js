@@ -9,34 +9,26 @@ Vue.component('button-counter', {
 });
 */
 
+Object.defineProperty(Array.prototype, 'shuffle', {
+    value: function() {
+        for (let i = this.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [this[i], this[j]] = [this[j], this[i]];
+        }
+        return this;
+    }
+});
+
+
+
 var trice = new Vue({
     el: '#trice',
     data: {
-        rows: [
-            {
-                columns: [new EmptyCell(),new EmptyCell(),new EmptyCell(),new EmptyCell()]
-            },                 
-            {   
-                columns: [new EmptyCell(),new EmptyCell(),new EmptyCell(),new EmptyCell()]
-            }, 
-            {
-                columns: [new EmptyCell(),new EmptyCell(),new EmptyCell(),new EmptyCell()]
-            }
-            ],
-        tricePositions: [[[0,0],[0,1],[0,2]],[[0,1],[0,2],[0,3]], //1st row
-                         [[1,0],[1,1],[1,2]],[[1,1],[1,2],[1,3]], //2nd row
-                         [[2,0],[2,1],[2,2]],[[2,1],[2,2],[2,3]], //3rd row
-                         [[0,0],[1,0],[2,0]], //1st col
-                         [[0,1],[1,1],[2,1]], //2nd col
-                         [[0,2],[1,2],[2,2]], //3rd col
-                         [[0,3],[1,3],[2,3]], //4th col
-                         [[0,0],[1,1],[2,2]], //  \-
-                         [[0,1],[1,2],[2,3]], //  -\
-                         [[2,0],[1,1],[0,2]], //  /-
-                         [[2,1],[1,2],[0,3]]  //  -/
-                         ],
+        rows: [],
+        tricePositions: [],
+        rowNum: 3,
+        colNum: 4,
         diceColors: ["w","o","p"],
-        numberOfDice: 4,
         dice: [],
         players: [{name: "Player 1", color: "blue"}, {name: "Player 2", color: "red"}],
         currPlayerIndex: 0,
@@ -47,11 +39,12 @@ var trice = new Vue({
         movedDice: [] //dice moved in board completed
     },
     computed: {         
+        numberOfDice: function  () {return this.colNum*this.rowNum/this.diceColors.length;},
         boardCompleted: function() {return this.dice.length === 0},
         currentPlayer: function() {return this.players[this.currPlayerIndex]},
         nextPlayerIndex: function() {return this.currPlayerIndex === 1 ? 0 : 1; },
         nextMoveDescription: function(){
-                if(this.dice.length === 0) return "";
+                if(this.rows.length === 0) return "";
                 if(this.winnerPlayerIndex >= 0) {
                     this.currPlayerIndex = this.winnerPlayerIndex;
                     return this.players[this.winnerPlayerIndex].name + " is the winner!";
@@ -87,6 +80,52 @@ var trice = new Vue({
     methods: { 
         UndoMove: function(){
             console.log("todo");
+        },
+        CreateGrid: function(){
+            this.rows = [];
+            for (var i = 0; i < this.rowNum; i++) {
+                let c = [];  
+                for (var j = 0; j < this.colNum; j++) {
+                    c.push(new EmptyCell());
+                }
+                this.rows.push({columns: c});
+            }
+        },
+        CreateTricePositions: function(){
+            this.tricePositions = [];
+            //horizontal
+            for (var i = 0; i < this.rowNum; i++) {
+                let shift = 0;
+                while(this.colNum - shift >= 3)
+                {
+                    this.tricePositions.push([[i,shift],[i,shift+1],[i,shift+2]]);
+                    shift++;
+                }
+            }
+
+            //vertically  
+            for (var i = 0; i < this.colNum; i++) {
+                let shift = 0;
+                while(this.rowNum - shift >= 3)
+                {
+                    this.tricePositions.push([[shift,i],[shift+1,i],[shift+2,i]]);
+                    shift++;
+                }
+            }
+
+            //diag \\  ----
+            let shiftVert = 0            
+            while(this.colNum  - shiftVert >= 3) {
+                let shiftHor = 0;  
+                while(this.rowNum - shiftHor >= 3) {                    
+                    this.tricePositions.push([[shiftHor,shiftVert],[shiftHor+1,shiftVert+1],[shiftHor+2,shiftVert+2]]);
+                    this.tricePositions.push([[shiftHor+2,shiftVert],[shiftHor+1,shiftVert+1],[shiftHor,shiftVert+2]]);
+                    shiftHor++;   
+                }
+                shiftVert++;
+            }
+
+
         },
         CheckWinCondition: function(){
 
@@ -147,7 +186,7 @@ var trice = new Vue({
                 //multiple winning conditions... (only possible on isLose false)
 
                 this.winnerPlayerIndex  = winningTrice[0].winner;
-                
+
                 for (var i =  winningTrice.length - 1; i >= 0; i--) {
                     if(winningTrice[i].isLose)
                     {
@@ -161,7 +200,6 @@ var trice = new Vue({
 
                 }
             }
-
         },
         NextPlayer: function() {
             this.currPlayerIndex = this.nextPlayerIndex;
@@ -262,7 +300,6 @@ var trice = new Vue({
                     this.NextPlayer();
                 }
             }
-
         }
     },
     mounted: function() {
@@ -282,10 +319,32 @@ function EmptyCell()
     this.class = function() {return "empty"};
 }
 
+function NewGame()
+{
+    if((trice.colNum*trice.rowNum)%trice.diceColors.length !== 0 )
+    {
+        alert("The cell number must by multiple of " + trice.diceColors.length.toString());
+        return;
+    }
+
+    RollDice(trice);
+    trice.currPlayerIndex = 0;
+    trice.selectedDieId = -1;
+    trice.selectedRow = -1;
+    trice.selectedColumn = -1;
+    trice.winnerPlayerIndex = -1;
+    trice.movedDice = [];
+    trice.CreateGrid();
+    trice.CreateTricePositions();
+}
+
+
+
 function Die(id, color, pips) {
     this.id = id;
     this.color = color;
     this.pips = pips;
+    this.rotation = Math.floor(Math.random()*10);
     this.class = function() { 
         //all dice
         let s = "dice ";
@@ -293,7 +352,8 @@ function Die(id, color, pips) {
         s += "pips-" + this.pips.toString() + " ";
         if(this.selected()) { s += "selected " + trice.currentPlayer.color  + " ";}
         if(trice.movedDice.length > 1 && (trice.movedDice[0].id == this.id || trice.movedDice[1].id == this.id)) { s += "moved "; }
-        if(this.isWinningDie) { s += "winning " + trice.players[trice.winnerPlayerIndex].color; }
+        if(this.isWinningDie) { s += "winning " + trice.players[trice.winnerPlayerIndex].color + " " ; }
+        s += "dr-" + this.rotation + " " ;
         return s;
     }
     this.selected = function() { return this.id === trice.selectedDieId};
@@ -309,6 +369,7 @@ function RollDice(tr){
             tr.dice.push(new Die(i*tr.numberOfDice+j, col, Math.ceil(Math.random()*6)));
         }
     }
+    tr.dice.shuffle();
 }
 
 
